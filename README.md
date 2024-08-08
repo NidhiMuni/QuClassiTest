@@ -1,27 +1,15 @@
-# QuClassi: A Hybrid Deep Neural Network Architecture based on Quantum State Fidelity 
-## MLSys 2022 Publication
+# Comparing Quantum Encoding Methods in a Hybrid Deep Neural Network
+## Nidhi Munikote - Summer 2024, Pacific Northwest, National Laboratories
+### Ang Li, Sam Stein, Chenxu Liu
 
-QuClassi is a Quantum Deep Neural Network architecture for classification, based on quantum state fidelity 
+Testing basis encoding, amplitude encoding, and rotation encoding in QuClassi. 
 
-## Usage
+For comprehensive final results, see [amplitude encoding (best explained)](/quclassi_amp_errormit_hardware.ipynb), [basis encoding](/quclassi_basis_errormit_hardware.ipynb), and [rotation encoding](/quclassi_rotation_errormit_hardware.ipynb). This includes tests on the simulator, a simulator of the noise model from IBM_Torino, and IBM_Torino, including and excluding error mitigation.
 
-To use QuClassi, install the requirements by using 
-```bash
-pip install -r requirements.txt
-```
-Within main.py, there is a subsampling section
-```python
-SUBSAMPLE = 1000
-````
-This is to be edited according to computational constraints. More data results in slower training speeds, and hence subsamples are used for quicker evaluation.
+I initally ran tests on the simulator and any possible IBM quantum computers. To see results, see [here](/quclassi_amp_hardware.ipynb), [here](/quclassi_basis_hardware.ipynb), and [here](/quclassi_rotation_hardware.ipynb). These quantum computers did not achieve high accuracies. Because of these bad results, I decided to try error mitigation. 
 
-From here, to run the system, run the command
-```bash
-python main.py
-```
-Subsample sets can be edited by editting the training labels and training datasets accordingly. 
-
-[MLSys Link - Pending](127.0.0.0)
+The poster for presentation I gave at PNNL's intern symposium before I had my error mitigation results: [here](/Munikote_QE_Poster.pdf). 
 
 
+## About QuClassi
 [Arxiv Link](https://arxiv.org/abs/2103.11307)
